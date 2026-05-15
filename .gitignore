@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Results / outputs
+results/*.json
+results/*.csv
+results/*.png
+!results/.gitkeep
+
+# Models (large files)
+*.bin
+*.safetensors
+*.gguf
+
+# OS
+.DS_Store

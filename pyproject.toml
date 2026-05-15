@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "llm-inference-optimizer"
+version = "0.1.0"
+description = "Benchmarking and optimization toolkit for LLM inference"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+    "transformers>=4.40",
+    "accelerate>=0.29",
+    "bitsandbytes>=0.43",
+    "datasets>=2.18",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "matplotlib>=3.8",
+    "tqdm>=4.66",
+    "jupyter>=1.0",
+    "ipykernel>=6.29",
+    "psutil>=5.9",
+    "pynvml>=11.5",
+]
+
+[project.optional-dependencies]
+gptq = ["auto-gptq>=0.7"]
+awq  = ["autoawq>=0.2"]
+dev  = ["pytest>=8", "ruff>=0.4", "black>=24"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
