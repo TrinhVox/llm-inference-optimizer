@@ -6,7 +6,7 @@ dist/
 build/
 .venv/
 venv/
-
+.vscode
 # Notebooks
 .ipynb_checkpoints/
 
