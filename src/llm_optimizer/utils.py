@@ -1,10 +1,11 @@
+
 import torch
 import time
-import json
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from pathlib import Path
+
 
 MODEL_NAME = "Qwen/Qwen2.5-0.5B"
+
+
 
 PROMPTS = [
     "Explain the concept of gravity in simple terms.",
@@ -15,15 +16,6 @@ PROMPTS = [
 ]
 
 
-
-def load_model_fp16():
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModelForCausalLM.from_pretrained(
-        MODEL_NAME,
-        dtype=torch.float16,
-        device_map="auto",
-    )
-    return model, tokenizer
 
 
 def measure_inference(model, tokenizer, prompt, max_new_tokens=100):
@@ -57,34 +49,3 @@ def measure_inference(model, tokenizer, prompt, max_new_tokens=100):
         "peak_memory_mb": round(peak_memory_mb, 2),
         "output_preview": decoded[:200],
     }
-
-def run_baseline():
-    print("Loading model in FP16...")
-    model, tokenizer = load_model_fp16()
-    
-    model_mem = torch.cuda.max_memory_allocated() / 1024 / 1024
-    print(f"Model loaded. GPU memory: {model_mem:.0f} MB")
-    
-    results = []
-    for i, prompt in enumerate(PROMPTS):
-        print(f"\nRunning prompt {i+1}/{len(PROMPTS)}...")
-        result = measure_inference(model, tokenizer, prompt)
-        results.append(result)
-        print(f"  Tokens/sec: {result['tokens_per_sec']}")
-        print(f"  Peak memory: {result['peak_memory_mb']} MB")
-    
-    # Save results
-    output_path = Path("../../results/baseline_fp16.json")
-    output_path.parent.mkdir(exist_ok=True)
-    with open(output_path, "w") as f:
-        json.dump({
-            "model": MODEL_NAME,
-            "dtype": "float16",
-            "model_memory_mb": round(model_mem, 2),
-            "results": results,
-        }, f, indent=2)
-    
-    print(f"\nResults saved to {output_path}")
-
-if __name__ == "__main__":
-    run_baseline()
