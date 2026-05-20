@@ -30,7 +30,7 @@ def measure_inference(model, tokenizer, prompt, max_new_tokens=100):
     
     start = time.perf_counter()
     with torch.no_grad():
-        outputs = model.generate(**inputs, max_new_tokens=max_new_tokens) # input prompt + generated tokens
+        outputs = model.generate(**inputs, max_new_tokens=max_new_tokens, eos_token_id = None) # input prompt + generated tokens
     torch.cuda.synchronize()
     end = time.perf_counter()
     
