@@ -1,0 +1,140 @@
+{
+  "results": {
+    "fp16": {
+      "256": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 256,
+        "total_time_s": 1.9751,
+        "tokens_per_sec": 129.61,
+        "peak_memory_mb": 978.9,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts objects towards each other. It is the force that keeps planets and stars in their orbits around the sun. Gravity is wha"
+      },
+      "512": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 512,
+        "total_time_s": 3.9509,
+        "tokens_per_sec": 129.59,
+        "peak_memory_mb": 981.91,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts objects towards each other. It is the force that keeps planets and stars in their orbits around the sun. Gravity is wha"
+      },
+      "1024": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 1024,
+        "total_time_s": 7.8902,
+        "tokens_per_sec": 129.78,
+        "peak_memory_mb": 987.93,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts objects towards each other. It is the force that keeps planets and stars in their orbits around the sun. Gravity is wha"
+      },
+      "2048": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 2048,
+        "total_time_s": 15.8306,
+        "tokens_per_sec": 129.37,
+        "peak_memory_mb": 999.96,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts objects towards each other. It is the force that keeps planets and stars in their orbits around the sun. Gravity is wha"
+      }
+    },
+    "bnb_4bit": {
+      "256": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 256,
+        "total_time_s": 3.4655,
+        "tokens_per_sec": 73.87,
+        "peak_memory_mb": 509.27,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts objects towards each other. It is the force that keeps the planets and other celestial bodies in their orbits around th"
+      },
+      "512": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 512,
+        "total_time_s": 6.9041,
+        "tokens_per_sec": 74.16,
+        "peak_memory_mb": 509.27,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts objects towards each other. It is the force that keeps the planets and other celestial bodies in their orbits around th"
+      },
+      "1024": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 1024,
+        "total_time_s": 13.7774,
+        "tokens_per_sec": 74.32,
+        "peak_memory_mb": 509.27,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts objects towards each other. It is the force that keeps the planets and other celestial bodies in their orbits around th"
+      },
+      "2048": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 2048,
+        "total_time_s": 27.55,
+        "tokens_per_sec": 74.34,
+        "peak_memory_mb": 509.49,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts objects towards each other. It is the force that keeps the planets and other celestial bodies in their orbits around th"
+      }
+    },
+    "gptq_4bit": {
+      "256": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 256,
+        "total_time_s": 4.6397,
+        "tokens_per_sec": 55.18,
+        "peak_memory_mb": 483.41,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts all matter, including matter from space. It causes objects to pull toward one another due to a combination of other typ"
+      },
+      "512": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 512,
+        "total_time_s": 9.2675,
+        "tokens_per_sec": 55.25,
+        "peak_memory_mb": 486.42,
+        "output_preview": "Explain the concept of gravity in simple terms. In the simplest terms, gravity is a force that pulls objects towards their respective source.Human beings have the capacity to create art to express the"
+      },
+      "1024": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 1024,
+        "total_time_s": 18.5924,
+        "tokens_per_sec": 55.08,
+        "peak_memory_mb": 492.43,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is the gravitational pull that pulls things together based on their mass and the distance between them. It makes objects feel heavy, which makes"
+      },
+      "2048": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 2048,
+        "total_time_s": 37.1285,
+        "tokens_per_sec": 55.16,
+        "peak_memory_mb": 504.46,
+        "output_preview": "Explain the concept of gravity in simple terms. In simple terms, gravity is the force that draws Earth towards our planet. It pulls objects down towards the center of our solar system as they start to"
+      }
+    },
+    "awq_4bit": {
+      "256": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 256,
+        "total_time_s": 4.1843,
+        "tokens_per_sec": 61.18,
+        "peak_memory_mb": 479.38,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts all objects in the universe, including planets, stars, and even other objects. It is the force that keeps us on our fee"
+      },
+      "512": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 512,
+        "total_time_s": 11.5088,
+        "tokens_per_sec": 44.49,
+        "peak_memory_mb": 488.32,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts all objects in the universe, including planets, stars, and even other objects. It is the force that keeps us on our fee"
+      },
+      "1024": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 1024,
+        "total_time_s": 38.763,
+        "tokens_per_sec": 26.42,
+        "peak_memory_mb": 507.64,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts all objects in the universe, including planets, stars, and even other objects. It is the force that keeps us on our fee"
+      },
+      "2048": {
+        "prompt": "Explain the concept of gravity in simple terms.",
+        "generated_tokens": 2048,
+        "total_time_s": 90.1128,
+        "tokens_per_sec": 22.73,
+        "peak_memory_mb": 544.74,
+        "output_preview": "Explain the concept of gravity in simple terms. Gravity is a force that attracts all objects in the universe, including planets, stars, and even other objects. It is the force that keeps us on our fee"
+      }
+    }
+  }
+}
