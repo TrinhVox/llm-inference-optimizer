@@ -13,7 +13,6 @@ venv/
 # Results / outputs
 results/*.json
 results/*.csv
-results/*.png
 !results/.gitkeep
 
 # Models (large files)
