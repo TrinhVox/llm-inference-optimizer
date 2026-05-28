@@ -39,11 +39,6 @@ All three quantization methods achieve roughly 50% memory reduction, consistent 
 
 FP16, BitsAndBytes, and GPTQ maintain consistent throughput regardless of sequence length. AWQ degrades significantly — from 61 tokens/sec at 256 tokens to 23 tokens/sec at 2048 tokens — due to running on pure PyTorch fallback kernels without the optimized fused AWQ CUDA extensions. Memory usage grows gradually across all methods as the KV cache expands with longer sequences, though the increase is modest (~20 MB from 256 to 2048) given the small model size.
 
-### Profiler Analysis
-
-[Key findings from torch.profiler — FP16 spends 66% on pure compute, 
-BnB spends 42% on dequantization, etc.]
-
 ### FP16 Baseline
 The dominant operation is aten::mm (matrix multiplication) at 66% of CUDA time. This means the GPU is spending most of its time doing math and not shuffling data around. Total CUDA time: 422ms.
 
